@@ -1,0 +1,47 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "IBM Plex Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, SFMono-Regular, monospace;
+  --color-hud-bg: #07090d;
+  --color-hud-panel: #0c1218;
+  --color-hud-panel-2: #101820;
+  --color-hud-border: #1c2d3d;
+  --color-hud-cyan: #00d4ff;
+  --color-hud-amber: #f5a623;
+  --color-hud-muted: #7d93a8;
+  --color-hud-text: #d7e6f2;
+}
+
+html,
+body,
+#root {
+  min-height: 100%;
+}
+
+body {
+  margin: 0;
+  background: var(--color-hud-bg);
+  color: var(--color-hud-text);
+  font-family: var(--font-sans);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.hud-grid {
+  background-image:
+    linear-gradient(rgba(0, 212, 255, 0.035) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 212, 255, 0.035) 1px, transparent 1px);
+  background-size: 28px 28px;
+}
+
+.recharts-cartesian-grid-horizontal line,
+.recharts-cartesian-grid-vertical line {
+  stroke: #1c2d3d;
+}
+
+.recharts-tooltip-wrapper {
+  outline: none;
+}
